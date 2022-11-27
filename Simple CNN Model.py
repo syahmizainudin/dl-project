@@ -72,7 +72,7 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=
 # 7. Create callback function
 import os, datetime
 
-file_path = 'tensorboard_logs/exercise_5_logs'
+file_path = 'tensorboard_logs/cnn_test_logs'
 LOG_DIR = os.path.join(file_path, "log_" + datetime.datetime.now().strftime('%Y%m%d-%H%M%S'))
 tb = callbacks.TensorBoard(log_dir=LOG_DIR)
 es = callbacks.EarlyStopping(patience=10, verbose=1, restore_best_weights=True)
