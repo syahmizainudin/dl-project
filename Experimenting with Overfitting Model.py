@@ -103,7 +103,7 @@ import os, datetime
 es = keras.callbacks.EarlyStopping(patience=10, verbose=1, restore_best_weights=True)
 
 # TensorBoard callback function
-LOG_DIR = 'tensorboard_logs/exercise_4_logs'
+LOG_DIR = 'tensorboard_logs/overfit_test_logs'
 LOG_DIR = os.path.join(LOG_DIR, "log_" + datetime.datetime.now().strftime('%Y%m%d-%H%M%S') 
                         + ' - ES, L2, LAYERS, NODES, LABEL, DROPOUT_1_03')
 tb = keras.callbacks.TensorBoard(log_dir=LOG_DIR)
