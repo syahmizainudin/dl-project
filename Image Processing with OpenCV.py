@@ -27,7 +27,7 @@ cv2.destroyAllWindows()
 lenna_cvt_grayscale = cv2.cvtColor(lenna_original, cv2.COLOR_BGR2GRAY)
 lenna_cvt_rgb = cv2.cvtColor(lenna_original, cv2.COLOR_BGR2RGB)
 
-#Display the two images
+# Display the two images
 cv2.imshow("Converted Grayscale", lenna_cvt_grayscale)
 cv2.waitKey(0)
 cv2.imshow("RGB Lenna", lenna_cvt_rgb)
@@ -38,6 +38,7 @@ cv2.destroyAllWindows()
 # 5. Image resizing
 # (A) Downsize
 lenna_downsize = cv2.resize(lenna_original, (256, 256))
+
 # (B) Upsize
 lenna_upsize_1 = cv2.resize(lenna_downsize, (760, 760), interpolation=cv2.INTER_NEAREST)
 lenna_upsize_2 = cv2.resize(lenna_downsize, (760, 760), interpolation=cv2.INTER_LINEAR)
@@ -61,6 +62,7 @@ import os
 root_path = 'images/'
 image_path = os.path.join(root_path, "Lenna downsized.png")
 cv2.imwrite(image_path, lenna_downsize)
+
 # %%
 # 7. Image blurring
 image_path = 'images/Lenna noisy.png'
